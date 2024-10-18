@@ -1,6 +1,7 @@
 import TaskList from "./components/TaskList";
 import AddTaskModal from "./components/AddTaskModal";
 import useManage from "./hooks/useManage";
+import TasksTag from "./components/TasksTag";
 
 function App() {
   const {
@@ -17,7 +18,9 @@ function App() {
   } = useManage();
 
   return (
-    <div className="min-h-screen bg-pink-light p-4">
+    <div className="flex">
+      <TasksTag/>
+    <div className="min-h-screen w-screen bg-pink-light p-4">
       <header className="mb-8">
         <h1 className="text-3xl font-bold text-center text-pink-900">
           FocusHub
@@ -48,6 +51,7 @@ function App() {
 
       {/* Lista de tareas */}
       <TaskList deleteTask={deleteTask} tasks={tasks} />
+    </div>
     </div>
   );
 }

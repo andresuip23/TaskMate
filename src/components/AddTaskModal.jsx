@@ -13,13 +13,9 @@ function AddTaskModal({addTask,newTaskDate,setNewTaskText,newTaskText,handleDate
             />
 
             <div className="relative mb-4">
-              {/* Ícono de calendario junto al input de fecha */}
-              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              </div>
-
-              {/* Input de fecha visible */}
+              {/* Input de fecha*/}
               <input
-                className="w-full pl-10 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+                className="w-full pl-10 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-semiheavy"
                 type="date"
                 value={newTaskDate}
                 onChange={handleDateChange}
@@ -35,7 +31,7 @@ function AddTaskModal({addTask,newTaskDate,setNewTaskText,newTaskText,handleDate
               </button>
               <button
                 onClick={addTask}
-                className="px-4 py-2 bg-pink-900 text-pink-light rounded-md hover:bg-pink-heavy hover:text-pink-900 transition-all"
+                className="px-4 py-2 bg-pink-900 text-pink-light rounded-md hover:bg-pink-medium hover:text-pink-900 transition-all"
               >
                 Add Task
               </button>

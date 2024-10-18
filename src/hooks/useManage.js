@@ -2,8 +2,8 @@ import { useState } from "react";
 
 const useManage = () => {
   const [tasks, setTasks] = useState([
-    { id: 1, text: "test 2", date: "2024-10-20" },
-    { id: 2, text: "test1", date: "2024-10-22" },
+    { id: 1, text: "test 2", date: "2024-10-20",tag:"Work" },
+    { id: 2, text: "test1", date: "2024-10-22" ,tag:"School"},
   ]);
 
   const [newTaskText, setNewTaskText] = useState("");

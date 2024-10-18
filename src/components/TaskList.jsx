@@ -10,16 +10,18 @@ function TaskList({deleteTask,tasks}) {
                 key={task.id}
                 className="flex justify-between items-center p-4 bg-white rounded-md shadow-lg"
               >
-                <div>
+                <div className="flex  flex-col">
                   <span className="font-medium">{task.text}</span>
-                  <br />
+                  <div className="flex">
                   <span className="text-gray-500 text-sm">
                     Due: {task.date}
                   </span>
+                  <span className="pl-4 text-gray-500 text-sm">{task.tag}</span>
+                  </div>
                 </div>
                 <TfiTrash
                   onClick={() => deleteTask(task.id)} // Llamar a deleteTask con el id de la tarea
-                  className="text-pink-700 hover:text-pink-900 hover:text-lg transition-all"
+                  className="text-pink-700 hover:text-pink-900 hover:text-lg transition-all cursor-pointer"
                 />
               </li>
             ))}
