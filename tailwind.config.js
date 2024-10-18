@@ -4,8 +4,18 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  theme: {
-    extend: {},
+  theme: {   
+    extend: {
+      colors:{
+        pink:{
+          light:'#F9F5F6',
+          medium:'#F8E8EE',
+          semiheavy:'#FDCEDF',
+          heavy:'#F2BED1',
+        }
+  
+      },
+    },
   },
   plugins: [],
 }

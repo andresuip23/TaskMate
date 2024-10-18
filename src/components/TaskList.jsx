@@ -1,12 +1,14 @@
+import { TfiTrash } from "react-icons/tfi";
+
 function TaskList({deleteTask,tasks}) {
     return (  
-        <div className="max-w-md mx-auto">
+        <div className="max-w-md mx-auto ">
         {tasks.length > 0 ? (
-          <ul className="space-y-4">
+          <ul className="space-y-4 ">
             {tasks.map((task) => (
               <li
                 key={task.id}
-                className="flex justify-between items-center p-4 bg-white rounded-md shadow"
+                className="flex justify-between items-center p-4 bg-white rounded-md shadow-lg"
               >
                 <div>
                   <span className="font-medium">{task.text}</span>
@@ -15,12 +17,10 @@ function TaskList({deleteTask,tasks}) {
                     Due: {task.date}
                   </span>
                 </div>
-                <button
+                <TfiTrash
                   onClick={() => deleteTask(task.id)} // Llamar a deleteTask con el id de la tarea
-                  className="text-red-500 hover:text-red-600 transition-all"
-                >
-                  Delete
-                </button>
+                  className="text-pink-700 hover:text-pink-900 hover:text-lg transition-all"
+                />
               </li>
             ))}
           </ul>

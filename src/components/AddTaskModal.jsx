@@ -1,4 +1,4 @@
-function AddTaskModal({addTask,newTaskDate,setNewTaskText,newTaskText,setIsModalOpen,handleDateChange}) {
+function AddTaskModal({addTask,newTaskDate,setNewTaskText,newTaskText,handleDateChange,closeModal}) {
     return ( 
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-md">
@@ -28,14 +28,14 @@ function AddTaskModal({addTask,newTaskDate,setNewTaskText,newTaskText,setIsModal
 
             <div className="flex justify-end space-x-2">
               <button
-                onClick={() => setIsModalOpen(false)}
-                className="px-4 py-2 bg-gray-400 text-white rounded-md hover:bg-gray-500 transition-all"
+                onClick={closeModal}
+                className="px-4 py-2 bg-pink-medium text-pink-900 rounded-md hover:bg-pink-900 hover:text-pink-light transition-all"
               >
                 Cancel
               </button>
               <button
                 onClick={addTask}
-                className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-all"
+                className="px-4 py-2 bg-pink-900 text-pink-light rounded-md hover:bg-pink-heavy hover:text-pink-900 transition-all"
               >
                 Add Task
               </button>
